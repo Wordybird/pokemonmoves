@@ -32,7 +32,7 @@ public class PokemonTest{
     for (int i = 0; i < 4; i++) {
       pokemon.learn(moves);
     }
-    assertEquals(true, pokemon.moveCount());
+    assertEquals(true, pokemon.movepoolFull());
   }
 
   @Test
