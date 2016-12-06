@@ -1,3 +1,3 @@
-public class Moves {
+public class Moves implements Moveable {
   
 }

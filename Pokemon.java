@@ -1,10 +1,12 @@
+import java.util.*;
+
 public class Pokemon{
   private String name;
-  private Moves[] movepool;
+  private ArrayList<Moveable> movepool;
 
   public Pokemon(String name) {
     this.name = name;
-    this.movepool = new Moves[4];
+    this.movepool = new ArrayList<Moveable>();
   }
 
   public String getName() {
@@ -12,31 +14,15 @@ public class Pokemon{
   }
 
   public int moveCount() {
-    int count=0;
-    for (Moves moves : movepool) {
-      if (moves != null) {
-        count++;
-      }
-    }
-    return count;
+    return movepool.size();
   }
 
-  public void learn(Moves moves) {
-    if (movepoolFull()) {
-      return;
-    }
-    int moveCount = moveCount();
-    movepool[moveCount] = moves;
-  }
-
-  public boolean movepoolFull() {
-    return moveCount() == movepool.length;
+  public void learn(Moveable moves) {
+    movepool.add(moves);
   }
 
   public void delete() {
-    for (int i = 0; i < movepool.length; i++) {
-      movepool[i] = null;
-    }
+    movepool.clear();
   }
 
 }

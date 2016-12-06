@@ -27,21 +27,6 @@ public class PokemonTest{
     assertEquals(1, pokemon.moveCount());
   }  
 
-  @Test
-  public void movepoolIsFull() {
-    for (int i = 0; i < 4; i++) {
-      pokemon.learn(moves);
-    }
-    assertEquals(true, pokemon.movepoolFull());
-  }
-
-  @Test
-  public void cannotLearnTooManyMoves() {
-    for (int i = 0; i < 10; i++) {
-      pokemon.learn(moves);
-    }
-    assertEquals(4, pokemon.moveCount());
-  }
 
   @Test
   public void shouldDeleteMoves() {
