@@ -7,7 +7,7 @@ int, boolean, double
 4. True or false? You can hold different data types in a Java array.
 False.
 5. How do you define instance variables in Java?
-public Class (instance type variable) {
+public Class (instance type variable) 
 6. True or false? You have to write your classes in files with .class extensions.
 False.
 7. What is the equivalent of the Ruby "puts" in Java? (displaying message in the terminal)
